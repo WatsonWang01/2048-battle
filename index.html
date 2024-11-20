@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2048 Battle Mode</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Victory Animation Container -->
+    <div id="victory-animation" class="victory-animation">
+        <div class="fireworks"></div>
+        <div class="confetti"></div>
+        <div class="victory-crown"></div>
+    </div>
+    
+    <!-- Game End Dialog -->
+    <div id="game-end-dialog" class="game-end-dialog">
+        <div class="dialog-content">
+            <h2 class="winner-title">🏆 Victory!</h2>
+            <div class="winner-stats">
+                <div class="winner-avatar">
+                    <div class="avatar-crown"></div>
+                    <div class="winner-glow"></div>
+                </div>
+                <div class="stats-details">
+                    <div class="final-score"></div>
+                    <div class="time-taken"></div>
+                    <div class="achievement"></div>
+                </div>
+            </div>
+            <div class="battle-summary"></div>
+            <div class="dialog-buttons">
+                <button id="play-again-btn" class="button primary">Play Again</button>
+                <button id="exit-btn" class="button secondary">Exit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-wrapper">
+        <!-- Player 1 -->
+        <div class="container player1">
+            <div class="header">
+                <div class="player-info">
+                    <h2>Player 1 (WASD)</h2>
+                    <div class="score-container">
+                        <div class="score">Score: <span id="score1">0</span></div>
+                        <div class="best-score">Best: <span id="best-score1">0</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="game-container">
+                <div id="grid1" class="grid"></div>
+            </div>
+        </div>
+
+        <!-- Battle Info -->
+        <div class="battle-info">
+            <h1>2048 Battle</h1>
+            <div class="timer">Time: <span id="timer">03:00</span></div>
+            <div class="battle-status">
+                <button id="new-game-btn" class="button">New Game</button>
+            </div>
+            <div class="instructions">
+                Player 1: Use WASD keys<br>
+                Player 2: Use Arrow keys<br>
+                First to reach 2048 or highest score in 3 minutes wins!
+            </div>
+        </div>
+
+        <!-- Player 2 -->
+        <div class="container player2">
+            <div class="header">
+                <div class="player-info">
+                    <h2>Player 2 (Arrows)</h2>
+                    <div class="score-container">
+                        <div class="score">Score: <span id="score2">0</span></div>
+                        <div class="best-score">Best: <span id="best-score2">0</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="game-container">
+                <div id="grid2" class="grid"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Victory Animation Container -->
+<div class="victory-animation">
+    <div class="fireworks"></div>
+    <div class="confetti"></div>
+    <div class="victory-crown"></div>
+</div>
+
+<!-- Game End Dialog -->
+<div class="game-end-dialog">
+    <div class="dialog-content">
+        <h1 class="winner-title">Victory!</h1>
+        <div class="winner-stats">
+            <div class="winner-avatar">
+                <div class="avatar-crown"></div>
+                <div class="winner-glow"></div>
+            </div>
+            <div class="stats-details">
+                <div>Final Score: <span class="final-score">0</span></div>
+                <div>Time Taken: <span class="time-taken">00:00</span></div>
+                <div>Best Score: <span class="best-score">0</span></div>
+            </div>
+        </div>
+        <div class="battle-summary">
+            <h3>Battle Summary</h3>
+            <p class="winner-message"></p>
+        </div>
+        <div class="dialog-buttons">
+            <button class="button primary" id="play-again">Play Again</button>
+            <button class="button secondary" id="exit-game">Exit</button>
+        </div>
+    </div>
+</div>
+    <script src="game.js"></script>
+</body>
+</html>
